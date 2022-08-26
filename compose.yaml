@@ -1,0 +1,10 @@
+services:
+  linktree:
+    container_name: linktree
+    build: .
+    ports:
+      - 3000:5173
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: unless-stopped
